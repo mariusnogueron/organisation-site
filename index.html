@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Organisation</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.65;
+        max-width: 42rem;
+        margin: 4rem auto;
+        padding: 0 16px;
+      }
+      h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+      .sub { color: #666; margin-top: 0; }
+      @media (prefers-color-scheme: dark) { .sub { color: #999; } }
+      ul { padding-left: 1.1rem; }
+      footer { margin-top: 3rem; font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Organisation</h1>
+    <p class="sub">Un espace de travail personnel : notes, todos, agenda et matières de cours.</p>
+
+    <p>
+      Organisation est une application personnelle, utilisée par une seule personne et exécutée
+      sur sa propre machine. Elle réunit au même endroit les notes de cours, les choses à faire,
+      l'agenda et les documents d'une année d'études. Les notes sont des fichiers Markdown que
+      leur auteur garde chez lui ; l'application les lit et les écrit, elle ne les héberge pas.
+    </p>
+
+    <h2>Google Agenda</h2>
+    <p>
+      La connexion à Google Agenda est facultative. Quand elle est activée, l'application demande
+      deux autorisations, et aucune autre :
+    </p>
+    <ul>
+      <li>
+        <code>calendar.readonly</code> — lire les agendas, pour afficher les cours et les
+        examens à côté des choses à faire.
+      </li>
+      <li>
+        <code>calendar.app.created</code> — écrire uniquement dans un agenda que l'application
+        crée elle-même. Avec cette autorisation, Google refuse à l'application toute écriture
+        dans les agendas existants.
+      </li>
+    </ul>
+
+    <footer>
+      <a href="./confidentialite.html">Politique de confidentialité</a>
+    </footer>
+  </body>
+</html>

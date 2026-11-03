@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confidentialité — Organisation</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.65;
+        max-width: 42rem;
+        margin: 4rem auto;
+        padding: 0 16px;
+      }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.1rem; margin-top: 2rem; }
+      .sub { color: #666; }
+      @media (prefers-color-scheme: dark) { .sub { color: #999; } }
+      ul { padding-left: 1.1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Politique de confidentialité</h1>
+    <p class="sub">Organisation — mise à jour le 4 novembre 2026</p>
+
+    <p>
+      Organisation est une application personnelle à utilisateur unique. Elle s'exécute sur
+      l'ordinateur de son utilisateur, à l'adresse <code>127.0.0.1</code>, et n'est pas accessible
+      depuis Internet. Il n'y a pas de serveur distant, pas de compte à créer, et aucune donnée
+      n'est transmise à l'éditeur de l'application ni à un tiers.
+    </p>
+
+    <h2>Données traitées</h2>
+    <ul>
+      <li>
+        <strong>Notes, todos et documents de cours</strong> : des fichiers sur le disque de
+        l'utilisateur, plus un index local qui sert à la recherche et qui peut être reconstruit
+        à partir d'eux.
+      </li>
+      <li>
+        <strong>Événements d'agenda</strong> : quand la connexion Google est activée, les
+        événements des agendas choisis sont copiés dans cet index local pour être affichés hors
+        ligne. Ils n'en sortent pas.
+      </li>
+      <li>
+        <strong>Jetons Google</strong> : le jeton d'accès et le jeton de rafraîchissement sont
+        stockés dans la base locale, sur la machine de l'utilisateur, et ne servent qu'à appeler
+        l'API Google Agenda.
+      </li>
+    </ul>
+
+    <h2>Autorisations Google et leur usage</h2>
+    <ul>
+      <li>
+        <code>https://www.googleapis.com/auth/calendar.readonly</code> — lire la liste des
+        agendas et leurs événements, pour les afficher dans l'application.
+      </li>
+      <li>
+        <code>https://www.googleapis.com/auth/calendar.app.created</code> — créer un agenda
+        dédié et y écrire les créneaux planifiés depuis l'application. Cette autorisation ne
+        donne aucun accès en écriture aux autres agendas : la restriction est appliquée par
+        Google, pas seulement par l'application.
+      </li>
+    </ul>
+    <p>
+      Les données issues de Google ne sont utilisées que pour afficher l'agenda dans
+      l'application. Elles ne sont ni revendues, ni partagées, ni transmises à un service tiers,
+      ni utilisées pour de la publicité, ni employées pour entraîner un modèle.
+    </p>
+
+    <h2>Conservation et suppression</h2>
+    <p>
+      Les données restent sur la machine de l'utilisateur aussi longtemps qu'il les y garde. Le
+      bouton « Déconnecter » de l'application supprime les jetons Google stockés localement ;
+      l'accès peut aussi être révoqué à tout moment depuis
+      <a href="https://myaccount.google.com/permissions">les autorisations du compte Google</a>.
+      Supprimer les fichiers de l'application efface les données locales, index compris.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Pour toute question sur cette politique, écrire à l'adresse de contact renseignée sur
+      l'écran de consentement Google de l'application.
+    </p>
+  </body>
+</html>
